@@ -1,3 +1,5 @@
+import morbiusImage from "./morbius.png";
+
 export const Icon = () => (
   <svg width="612" height="608" viewBox="0 0 612 608" fill="none">
     <mask id="mask0_0_1" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="77" width="612" height="531">
@@ -42,13 +44,7 @@ export const Icon = () => (
       <pattern id="pattern0_0_1" patternContentUnits="objectBoundingBox" width="1" height="1">
         <use href="#image0_0_1" transform="matrix(0.00197628 0 0 0.00195538 -0.743083 -0.263976)" />
       </pattern>
-      <image
-        id="image0_0_1"
-        width="1280"
-        height="864"
-        preserveAspectRatio="none"
-        href="./EGESHKA_front/src/assets/morbius.png"
-      />
+      <image id="image0_0_1" width="1280" height="864" preserveAspectRatio="none" href={morbiusImage} />
     </defs>
   </svg>
 );
