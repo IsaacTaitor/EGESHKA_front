@@ -2,11 +2,11 @@
 import { AppBar, Typography, Box } from "@mui/material";
 
 import HeaderIcon from "./assets/header";
+import { Icon } from "./assets/icon";
 import Button from "./components/Button";
 import Toolbar from "./components/Toolbar";
 
 import "./App.css";
-import { Icon } from "./icons/icon";
 
 // const Block = ({ children }: { children: ReactNode }) => {
 //   return <div>{children}</div>;

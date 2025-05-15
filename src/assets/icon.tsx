@@ -42,7 +42,7 @@ export const Icon = () => (
       <pattern id="pattern0_0_1" patternContentUnits="objectBoundingBox" width="1" height="1">
         <use href="#image0_0_1" transform="matrix(0.00197628 0 0 0.00195538 -0.743083 -0.263976)" />
       </pattern>
-      <image id="image0_0_1" width="1280" height="864" preserveAspectRatio="none" href="./src/icons/morbius.png" />
+      <image id="image0_0_1" width="1280" height="864" preserveAspectRatio="none" href="./src/assets/morbius.png" />
     </defs>
   </svg>
 );
