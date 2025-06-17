@@ -18,7 +18,7 @@ export const Anime = ({ artboard, stateMachines }: { artboard: string; stateMach
 function App() {
   return (
     <Box>
-      <AppBar position="static" color="inherit">
+      <AppBar position="sticky" color="inherit">
         <Toolbar className="toolbar">
           <Box
             sx={{ display: "flex", justifyContent: "space-between", maxWidth: "1272px", width: "100%", margin: "auto" }}
@@ -150,7 +150,9 @@ function App() {
             paddingLeft: "84px",
             paddingRight: "84px",
             height: "392px",
+            margin: "auto",
             marginTop: "165px",
+            maxWidth: "950px",
             gap: "48px",
           }}
         >
