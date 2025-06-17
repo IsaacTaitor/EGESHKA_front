@@ -1,6 +1,6 @@
 // import { ReactNode } from "react";
 import { AppBar, Typography, Box } from "@mui/material";
-import Rive from "@rive-app/react-canvas";
+import { Alignment, Fit, Layout, useRive } from "@rive-app/react-canvas";
 
 import HeaderIcon from "./assets/header";
 import { Icon } from "./assets/icon";
@@ -11,9 +11,22 @@ import "./App.css";
 
 import duckRive from "./assets/duck.riv";
 
-export const Anime = ({ artboard, stateMachines }: { artboard: string; stateMachines: string }) => (
-  <Rive src={duckRive} artboard={artboard} stateMachines={stateMachines} />
-);
+export function Anime({ artboard, stateMachines }: { artboard: string; stateMachines: string }) {
+  const { RiveComponent } = useRive({
+    src: duckRive,
+    stateMachines,
+    artboard,
+    autoplay: true,
+  });
+
+  return (
+    <RiveComponent
+      style={{
+        height: 392,
+      }}
+    />
+  );
+}
 
 function App() {
   return (
