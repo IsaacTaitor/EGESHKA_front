@@ -1,6 +1,6 @@
 // import { ReactNode } from "react";
 import { AppBar, Typography, Box } from "@mui/material";
-import { Alignment, Fit, Layout, useRive } from "@rive-app/react-canvas";
+import { useRive } from "@rive-app/react-canvas";
 
 import HeaderIcon from "./assets/header";
 import { Icon } from "./assets/icon";
@@ -129,7 +129,7 @@ function App() {
               flexDirection: "column",
               borderRadius: 0,
               margin: "150px 0 0 0",
-              padding: "0 24px 0 24px",
+              padding: "24px",
             },
             display: "flex",
             alignItems: "center",
