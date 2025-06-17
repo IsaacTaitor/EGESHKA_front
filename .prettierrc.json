@@ -12,7 +12,7 @@
   "arrowParens": "always",
   "overrides": [
     {
-      "files": "*.svg",
+      "files": "*.svg *.riv",
       "options": {
         "parser": "html"
       }

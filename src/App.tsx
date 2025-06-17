@@ -1,5 +1,6 @@
 // import { ReactNode } from "react";
 import { AppBar, Typography, Box } from "@mui/material";
+import Rive from "@rive-app/react-canvas";
 
 import HeaderIcon from "./assets/header";
 import { Icon } from "./assets/icon";
@@ -8,9 +9,11 @@ import Toolbar from "./components/Toolbar";
 
 import "./App.css";
 
-// const Block = ({ children }: { children: ReactNode }) => {
-//   return <div>{children}</div>;
-// };
+import duckRive from "./assets/duck.riv";
+
+export const Anime = ({ artboard, stateMachines }: { artboard: string; stateMachines: string }) => (
+  <Rive src={duckRive} artboard={artboard} stateMachines={stateMachines} />
+);
 
 function App() {
   return (
@@ -63,7 +66,9 @@ function App() {
               приложение, которое всегда с тобой. Дома, в такси, на уроке - ЕГЭШКА всегда рядом!
             </Typography>
           </div>
-          <div className="halfBox anime" />
+          <div className="halfBox anime">
+            <Anime artboard="Artboard 2" stateMachines="State Machine 2" />
+          </div>
         </Box>
         <Box
           sx={{
@@ -76,7 +81,9 @@ function App() {
             gap: "48px",
           }}
         >
-          <div className="halfBox anime" />
+          <div className="halfBox anime">
+            <Anime artboard="Artboard 14" stateMachines="State Machine 14" />
+          </div>
           <div className="halfBox">
             <Typography variant="h1" sx={{ color: "#00BBFF", paddingBottom: "24px" }}>
               Потому что это просто и весело!
@@ -99,7 +106,9 @@ function App() {
             borderRadius: "16px",
           }}
         >
-          <div className="halfBox anime" style={{ backgroundColor: "white" }} />
+          <div className="halfBox anime" style={{ backgroundColor: "white" }}>
+            <Anime artboard="Artboard 15" stateMachines="State Machine 15" />
+          </div>
           <div className="halfBox">
             <Typography variant="h1" sx={{ color: "white", paddingBottom: "24px" }}>
               Тренируйся
@@ -145,7 +154,9 @@ function App() {
             gap: "48px",
           }}
         >
-          <div className="halfBox anime" />
+          <div className="halfBox anime">
+            <Anime artboard="Artboard 16" stateMachines="State Machine 16" />
+          </div>
         </Box>
         <Box
           sx={{
