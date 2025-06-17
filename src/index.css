@@ -27,7 +27,9 @@ body {
 }
 
 .anime {
-  height: 100%;
+  height: 392px;
+  min-height: 392px;
+  min-width: 300px;
   /* border: 1px solid #00bbff; */
   border-radius: 16px;
   overflow: hidden;

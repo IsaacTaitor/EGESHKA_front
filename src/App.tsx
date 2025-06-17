@@ -21,7 +21,14 @@ function App() {
       <AppBar position="sticky" color="inherit">
         <Toolbar className="toolbar">
           <Box
-            sx={{ display: "flex", justifyContent: "space-between", maxWidth: "1272px", width: "100%", margin: "auto" }}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              maxWidth: "1272px",
+              width: "100%",
+              margin: "auto",
+              height: "40px",
+            }}
           >
             <Box sx={{ flexGrow: 1, display: "flex", gap: 3, alignItems: "center" }}>
               <HeaderIcon />
@@ -47,23 +54,28 @@ function App() {
         }}
       >
         <Box
-          sx={{
+          sx={(theme) => ({
+            [theme.breakpoints.down("sm")]: {
+              flexDirection: "column",
+              justifyContent: "center",
+              padding: "0 24px 0 24px",
+            },
             display: "flex",
             alignItems: "center",
             paddingLeft: "84px",
             paddingRight: "84px",
-            height: "392px",
             marginTop: "129px",
             gap: "48px",
-          }}
+          })}
         >
           <div className="halfBox">
             <Typography variant="h1" sx={{ color: "#00BBFF", paddingBottom: "24px" }}>
-              Твой верный помощник в подготовке к ЕГЭ!
+              Твой верный помощник в&nbsp;подготовке к&nbsp;ЕГЭ!
             </Typography>
             <Typography variant="body1">
-              Мы такие же ребята, как и ты. Мы сдавали ЕГЭ и знаем, как это бывает. Поэтому мы создали ЕГЭШКУ -
-              приложение, которое всегда с тобой. Дома, в такси, на уроке - ЕГЭШКА всегда рядом!
+              Мы&nbsp;такие&nbsp;же ребята, как и&nbsp;ты. Мы&nbsp;сдавали ЕГЭ и&nbsp;знаем, как это бывает. Поэтому
+              мы&nbsp;создали ЕГЭШКУ - приложение, которое всегда с&nbsp;тобой. Дома, в&nbsp;такси,
+              на&nbsp;уроке&nbsp;&mdash; ЕГЭШКА всегда рядом!
             </Typography>
           </div>
           <div className="halfBox anime">
@@ -71,40 +83,49 @@ function App() {
           </div>
         </Box>
         <Box
-          sx={{
+          sx={(theme) => ({
+            [theme.breakpoints.down("sm")]: {
+              flexDirection: "column-reverse",
+              padding: "0 24px 0 24px",
+            },
             display: "flex",
             alignItems: "center",
             paddingLeft: "84px",
             paddingRight: "84px",
-            height: "392px",
             marginTop: "150px",
             gap: "48px",
-          }}
+          })}
         >
           <div className="halfBox anime">
             <Anime artboard="Artboard 14" stateMachines="State Machine 14" />
           </div>
           <div className="halfBox">
             <Typography variant="h1" sx={{ color: "#00BBFF", paddingBottom: "24px" }}>
-              Потому что это просто и весело!
+              Потому что это просто и&nbsp;весело!
             </Typography>
             <Typography variant="body1">
-              Самые актуальные варианты от «ФИПИ» с подробным разбором. Забудь о скучных тестах - выбирай ответы из
-              вариантов или составляй их из кусочков. Готовься легко и с удовольствием!
+              Самые актуальные варианты от&nbsp;&laquo;ФИПИ&raquo; с&nbsp;подробным разбором. Забудь о&nbsp;скучных
+              тестах&nbsp;&mdash; выбирай ответы из вариантов или составляй их&nbsp;из&nbsp;кусочков. Готовься легко
+              и&nbsp;с&nbsp;удовольствием!
             </Typography>
           </div>
         </Box>
         <Box
-          sx={{
+          sx={(theme) => ({
+            [theme.breakpoints.down("sm")]: {
+              flexDirection: "column",
+              borderRadius: 0,
+              margin: "150px 0 0 0",
+              padding: "0 24px 0 24px",
+            },
             display: "flex",
             alignItems: "center",
-            height: "392px",
             margin: "150px 84px 0 84px",
             padding: "53px 110px",
             gap: "48px",
             backgroundColor: "#00BBFF",
             borderRadius: "16px",
-          }}
+          })}
         >
           <div className="halfBox anime" style={{ backgroundColor: "white" }}>
             <Anime artboard="Artboard 15" stateMachines="State Machine 15" />
@@ -115,25 +136,30 @@ function App() {
               <br /> по-новому!
             </Typography>
             <Typography variant="body1" sx={{ color: "white" }}>
-              Выбирай ответ или собирай его из кусочков. Так проще и интереснее!
+              Выбирай ответ или собирай его из&nbsp;кусочков. Так проще и&nbsp;интереснее!
             </Typography>
           </div>
         </Box>
         <Box
-          sx={{
+          sx={(theme) => ({
+            [theme.breakpoints.down("sm")]: {
+              flexDirection: "column",
+              padding: "0 24px 0 24px",
+            },
             display: "flex",
             paddingLeft: "84px",
             paddingRight: "84px",
             marginTop: "129px",
             gap: "48px",
-          }}
+          })}
         >
           <div className="halfBox">
             <Typography variant="h1" sx={{ color: "#00BBFF", paddingBottom: "24px" }}>
               Всегда свежие задания!
             </Typography>
             <Typography variant="body1">
-              Самые новые варианты от «ФИПИ». С нами ты получишь доступ к самым актуальным материалам для подготовки.
+              Самые новые варианты от&nbsp;&laquo;ФИПИ&raquo;. С&nbsp;нами ты&nbsp;получишь доступ к&nbsp;самым
+              актуальным материалам для подготовки.
             </Typography>
           </div>
           <div className="halfBox">
@@ -145,16 +171,18 @@ function App() {
           </div>
         </Box>
         <Box
-          sx={{
+          sx={(theme) => ({
+            [theme.breakpoints.down("sm")]: {
+              padding: 0,
+            },
             display: "flex",
             paddingLeft: "84px",
             paddingRight: "84px",
-            height: "392px",
             margin: "auto",
             marginTop: "165px",
             maxWidth: "950px",
             gap: "48px",
-          }}
+          })}
         >
           <div className="halfBox anime">
             <Anime artboard="Artboard 16" stateMachines="State Machine 16" />
@@ -179,7 +207,8 @@ function App() {
               Скачай ЕГЭШКУ и&nbsp;вперед к успеху!
             </Typography>
             <Typography variant="body1">
-              ЕГЭШКА — это не просто тренажер, это твой друг и помощник. Скачивай приложение и убедись сам!
+              ЕГЭШКА&nbsp;&mdash; это не&nbsp;просто тренажер, это твой друг и&nbsp;помощник. Скачивай приложение
+              и&nbsp;убедись сам!
             </Typography>
           </Box>
         </Box>
@@ -195,7 +224,16 @@ function App() {
           }}
         >
           <Icon />
-          <Box sx={{ display: "flex", gap: "530px", position: "absolute", top: "269px", marginLeft: "-52px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              position: "absolute",
+              top: "269px",
+              margin: "auto",
+              width: "90vw",
+              justifyContent: "space-between",
+            }}
+          >
             <Button className="Button" variant="contained">
               для Android
             </Button>
@@ -206,13 +244,16 @@ function App() {
         </Box>
       </Box>
       <Box
-        sx={{
+        sx={(theme) => ({
+          [theme.breakpoints.down("sm")]: {
+            padding: "170px 24px 0px 24px",
+          },
           position: "relative",
           marginTop: "303px",
           height: "502px",
           backgroundColor: "#00BBFF",
           padding: "170px 84px 0px 84px",
-        }}
+        })}
       >
         <Box
           sx={{
