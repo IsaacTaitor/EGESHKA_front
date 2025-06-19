@@ -1,7 +1,7 @@
 import morbiusImage from "./morbius.png";
 
 export const Icon = () => (
-  <svg width="612" height="608" viewBox="0 0 612 608" fill="none">
+  <svg width="612" viewBox="0 0 612 608" fill="none">
     <mask id="mask0_0_1" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="77" width="612" height="531">
       <path d="M0 77H612V461C612 461 612 608 306 608C0 608 0 461 0 461V77Z" fill="#D9D9D9" />
     </mask>

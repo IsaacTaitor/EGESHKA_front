@@ -1,5 +1,5 @@
 // import { ReactNode } from "react";
-import { AppBar, Typography, Box } from "@mui/material";
+import { AppBar, Typography, Box, createTheme, Link } from "@mui/material";
 import { useRive } from "@rive-app/react-canvas";
 
 import HeaderIcon from "./assets/header";
@@ -11,11 +11,26 @@ import "./App.css";
 
 import duckRive from "./assets/duck.riv";
 
+const link_rr = "https://youtu.be/dQw4w9WgXcQ?si=rmw_7BP0DQ2Pe-UP";
+
+const themeCreated = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1090,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
+});
+
 export function Anime({ artboard, stateMachines }: { artboard: string; stateMachines: string }) {
   const { RiveComponent } = useRive({
     src: duckRive,
     stateMachines,
     artboard,
+    isTouchScrollEnabled: true,
     autoplay: true,
   });
 
@@ -34,18 +49,33 @@ function App() {
       <AppBar position="sticky" color="inherit">
         <Toolbar className="toolbar">
           <Box
-            sx={{
+            sx={(theme) => ({
+              [theme.breakpoints.down("sm")]: {},
               display: "flex",
               justifyContent: "space-between",
+              gap: "8px",
+              alignItems: "center",
               maxWidth: "1272px",
               width: "100%",
               margin: "auto",
               height: "40px",
-            }}
+            })}
           >
-            <Box sx={{ flexGrow: 1, display: "flex", gap: 3, alignItems: "center" }}>
+            <Box
+              sx={(theme) => ({
+                [theme.breakpoints.down("sm")]: { gap: 1, fontSize: 12 },
+                flexGrow: 1,
+                display: "flex",
+                gap: 3,
+                alignItems: "center",
+              })}
+            >
               <HeaderIcon />
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#00BBFF" }}>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={(theme) => ({ [theme.breakpoints.down("sm")]: { fontSize: 20 }, flexGrow: 1, color: "#00BBFF" })}
+              >
                 ЕГЭШКА
               </Typography>
             </Box>
@@ -72,6 +102,7 @@ function App() {
               flexDirection: "column",
               justifyContent: "center",
               padding: "0 24px 0 24px",
+              marginTop: "48px",
             },
             display: "flex",
             alignItems: "center",
@@ -100,6 +131,7 @@ function App() {
             [theme.breakpoints.down("sm")]: {
               flexDirection: "column-reverse",
               padding: "0 24px 0 24px",
+              marginTop: "48px",
             },
             display: "flex",
             alignItems: "center",
@@ -125,11 +157,15 @@ function App() {
         </Box>
         <Box
           sx={(theme) => ({
+            [themeCreated.breakpoints.down("md")]: {
+              flexDirection: "column",
+            },
             [theme.breakpoints.down("sm")]: {
               flexDirection: "column",
               borderRadius: 0,
               margin: "150px 0 0 0",
               padding: "24px",
+              marginTop: "48px",
             },
             display: "flex",
             alignItems: "center",
@@ -158,6 +194,7 @@ function App() {
             [theme.breakpoints.down("sm")]: {
               flexDirection: "column",
               padding: "0 24px 0 24px",
+              marginTop: "48px",
             },
             display: "flex",
             paddingLeft: "84px",
@@ -187,6 +224,7 @@ function App() {
           sx={(theme) => ({
             [theme.breakpoints.down("sm")]: {
               padding: 0,
+              marginTop: "48px",
             },
             display: "flex",
             paddingLeft: "84px",
@@ -202,14 +240,19 @@ function App() {
           </div>
         </Box>
         <Box
-          sx={{
+          sx={(theme) => ({
+            [theme.breakpoints.down("sm")]: {
+              padding: "0 24px 0 24px",
+              textAlign: "left",
+              marginTop: "0px",
+            },
             display: "flex",
             justifyContent: "center",
             paddingLeft: "84px",
             paddingRight: "84px",
             marginTop: "146px",
             textAlign: "center",
-          }}
+          })}
         >
           <Box
             sx={{
@@ -226,7 +269,11 @@ function App() {
           </Box>
         </Box>
         <Box
-          sx={{
+          sx={(theme) => ({
+            [theme.breakpoints.down("sm")]: {
+              padding: "0 24px 0 24px",
+              marginTop: "0px",
+            },
             display: "flex",
             position: "relative",
             justifyContent: "center",
@@ -234,18 +281,25 @@ function App() {
             paddingRight: "84px",
             marginTop: "6px",
             textAlign: "center",
-          }}
+          })}
         >
           <Icon />
           <Box
-            sx={{
+            sx={(theme) => ({
+              [theme.breakpoints.down("sm")]: {
+                width: "100%",
+                marginLeft: "0px",
+              },
               display: "flex",
               position: "absolute",
-              top: "269px",
-              margin: "auto",
+              top: "40%",
+              padding: "0 24px 0 24px",
+              // margin: "auto",
               width: "90vw",
+              marginLeft: "-50px",
+              maxWidth: "800px",
               justifyContent: "space-between",
-            }}
+            })}
           >
             <Button className="Button" variant="contained">
               для Android
@@ -260,6 +314,10 @@ function App() {
         sx={(theme) => ({
           [theme.breakpoints.down("sm")]: {
             padding: "170px 24px 0px 24px",
+            marginTop: "48px",
+            paddingTop: "52px",
+            fontSize: "14px",
+            height: "250px",
           },
           position: "relative",
           marginTop: "303px",
@@ -279,22 +337,42 @@ function App() {
               display: "flex",
               color: "white",
               justifyContent: "space-between",
+              gap: "8px",
             }}
           >
             <div style={{ width: "392px" }}>
               ПРИЛОЖЕНИЕ:
-              <br /> ЕГЭШКА для Android
-              <br /> ЕГЭШКА для iOS
+              <br />
+              <Link href={link_rr} target="_blank" color="inherit">
+                ЕГЭШКА для Android
+              </Link>{" "}
+              <br />
+              <Link href={link_rr} target="_blank" color="inherit">
+                ЕГЭШКА для iOS
+              </Link>
+              <br />
             </div>
             <div style={{ width: "392px" }}>
               СОЦСЕТИ:
-              <br /> Группа Вконтакте
-              <br /> Канал в Телеграмм
+              <br />
+              <Link href={link_rr} target="_blank" color="inherit">
+                Вконтакте
+              </Link>
+              <br />
+              <Link href={link_rr} target="_blank" color="inherit">
+                Канал в Телеграмм
+              </Link>
             </div>
             <div style={{ width: "392px" }}>
               ПОДДЕРЖАТЬ ЕГЭШКУ
-              <br /> Вконтакте
-              <br /> QR-код СБП
+              <br />
+              <Link href={link_rr} target="_blank" color="inherit">
+                Вконтакте
+              </Link>
+              <br />
+              <Link href={link_rr} target="_blank" color="inherit">
+                QR-код СБП
+              </Link>
             </div>
           </div>
         </Box>

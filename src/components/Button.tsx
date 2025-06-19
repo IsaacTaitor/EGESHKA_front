@@ -1,7 +1,13 @@
 import { Button as MuiButton, ButtonProps as MuiButtonProps } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-const Button = styled(MuiButton)(() => ({
+const Button = styled(MuiButton)(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    fontSize: 12,
+    padding: "4px 8px",
+    height: "36px",
+  },
+  height: "36px",
   borderRadius: "8px",
   fontFamily: "SF Pro Text",
   padding: "8px 16px",
