@@ -11,8 +11,6 @@ import "./App.css";
 
 import duckRive from "./assets/duck.riv";
 
-const link_rr = "https://youtu.be/dQw4w9WgXcQ?si=rmw_7BP0DQ2Pe-UP";
-
 const themeCreated = createTheme({
   breakpoints: {
     values: {
@@ -80,10 +78,10 @@ function App() {
               </Typography>
             </Box>
             <Box sx={{ display: "flex", gap: 2 }}>
-              <Button className="Button" variant="contained">
+              <Button href={"https://kutt.it/egeshka-web-android"} className="Button" variant="contained">
                 для Android
               </Button>
-              <Button className="Button" variant="contained">
+              <Button href={"https://kutt.it/egeshka-web-ios"} className="Button" variant="contained">
                 для IOS
               </Button>
             </Box>
@@ -301,10 +299,10 @@ function App() {
               justifyContent: "space-between",
             })}
           >
-            <Button className="Button" variant="contained">
+            <Button href={"https://kutt.it/egeshka-web-android"} className="Button" variant="contained">
               для Android
             </Button>
-            <Button className="Button" variant="contained">
+            <Button href={"https://kutt.it/egeshka-web-ios"} className="Button" variant="contained">
               для IOS
             </Button>
           </Box>
@@ -343,11 +341,11 @@ function App() {
             <div style={{ width: "392px" }}>
               ПРИЛОЖЕНИЕ:
               <br />
-              <Link href={link_rr} target="_blank" color="inherit">
+              <Link href={"https://kutt.it/egeshka-web-android"} target="_blank" color="inherit">
                 ЕГЭШКА для Android
-              </Link>{" "}
+              </Link>
               <br />
-              <Link href={link_rr} target="_blank" color="inherit">
+              <Link href={"https://kutt.it/egeshka-web-ios"} target="_blank" color="inherit">
                 ЕГЭШКА для iOS
               </Link>
               <br />
@@ -355,22 +353,22 @@ function App() {
             <div style={{ width: "392px" }}>
               СОЦСЕТИ:
               <br />
-              <Link href={link_rr} target="_blank" color="inherit">
+              <Link href={"https://kutt.it/egeska-web-vk"} target="_blank" color="inherit">
                 Вконтакте
               </Link>
               <br />
-              <Link href={link_rr} target="_blank" color="inherit">
+              <Link href={"https://kutt.it/egeska-web-tg"} target="_blank" color="inherit">
                 Канал в Телеграмм
               </Link>
             </div>
             <div style={{ width: "392px" }}>
               ПОДДЕРЖАТЬ ЕГЭШКУ
               <br />
-              <Link href={link_rr} target="_blank" color="inherit">
+              <Link href={"https://kutt.it/egeska-web-vk"} target="_blank" color="inherit">
                 Вконтакте
               </Link>
               <br />
-              <Link href={link_rr} target="_blank" color="inherit">
+              <Link href={"https://kutt.it/egeshka-web-donation"} target="_blank" color="inherit">
                 QR-код СБП
               </Link>
             </div>
