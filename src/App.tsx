@@ -319,9 +319,9 @@ function App() {
           },
           position: "relative",
           marginTop: "303px",
-          height: "502px",
+          height: "300px",
           backgroundColor: "#00BBFF",
-          padding: "170px 84px 0px 84px",
+          padding: "120px 84px 0px 84px",
         })}
       >
         <Box
